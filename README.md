@@ -19,7 +19,7 @@
 
 ---
 
-YesCan OpenClaw Skills 将 [夸克扫描王 (YesCan)](https://scan.quark.cn/business) 的文档 AI 能力封装为三个 [OpenClaw](https://github.com/anthropics/openclaw) Agent 技能。
+Yescan OpenClaw Skills 将 [夸克扫描王 (YesCan)](https://scan.quark.cn/business) 的文档 AI 能力封装为三个 [OpenClaw](https://github.com/anthropics/openclaw) Agent 技能。
 
 只需一个 `pip install` 和一个 API Key，你的 OpenClaw Agent 即可获得 **30+ 文档处理场景**的能力——包括手写识别、表格 OCR、证件扫描、图像增强、去水印以及图片转 Word/Excel/PDF。
 
