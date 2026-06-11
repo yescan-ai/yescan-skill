@@ -7,7 +7,7 @@ This repository is the OpenClaw-native distribution of Yescan. Each skill is des
 ## Three Skills
 
 - [yescan-ocr-universal](https://github.com/yescan-ai/yescan-skill#-ocr-文字识别): OCR text recognition across 17 scenes — handwritten text, tables, ID cards, social-security cards, HK/Macau/TW travel permits, degree certificates, VAT invoices, train tickets, math formulas, exam questions, driver's licenses, vehicle licenses, commercial invoices, medical reports, business licenses, product images, and general text extraction (fallback)
-- [yescan-scan-universal](https://github.com/yescan-ai/yescan-skill#-文件扫描增强): document-scan enhancement across 13 modes — handwriting OCR, exam-paper enhance, image HD enhance, certificate/receipt enhance, handwriting removal, watermark removal, shadow removal, screen-pattern removal, background-color removal, crop & rectify, sketch drawing, line-art extraction, general document scan
+- [yescan-scan-universal](https://github.com/yescan-ai/yescan-skill#-文件扫描增强): document-scan enhancement across 13 modes — exam-paper enhance, image HD enhance, certificate/receipt enhance, handwriting removal, watermark removal, shadow removal, screen-pattern removal, background-color removal, crop & rectify, sketch drawing, line-art extraction, contract reorganization, general document scan
 - [yescan-transoffice-universal](https://github.com/yescan-ai/yescan-skill#-图片转-office): image-to-Office conversion in 3 formats — image-to-excel (.xlsx), image-to-word (.docx), image-to-pdf (.pdf)
 
 ## Quick Start
