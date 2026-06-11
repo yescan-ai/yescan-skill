@@ -1,0 +1,46 @@
+# Yescan Skills for OpenClaw
+
+> Yescan Skills is an Agent-native skill bundle that packages the Yescan document-AI stack (powered by Quark Scan) into three OpenClaw skills: OCR text recognition (17 scenes), document-scan enhancement (13 modes), and image-to-Office conversion (Word / Excel / PDF). A single API key unlocks all 30+ scenarios; input can be a URL, local file, or Base64 string, and output is structured JSON, enhanced images, or editable documents.
+
+This repository is the OpenClaw-native distribution of Yescan. Each skill is designed from the ground up for OpenClaw's intent-matching, scene-routing, and structured-JSON execution model — install, set the API key once, and the Agent automatically picks the right scene for each user request.
+
+## Three Skills
+
+- [yescan-ocr-universal](https://github.com/yescan-ai/yescan-skill#-ocr-文字识别): OCR text recognition across 17 scenes — handwritten text, tables, ID cards, social-security cards, HK/Macau/TW travel permits, degree certificates, VAT invoices, train tickets, math formulas, exam questions, driver's licenses, vehicle licenses, commercial invoices, medical reports, business licenses, product images, and general text extraction (fallback)
+- [yescan-scan-universal](https://github.com/yescan-ai/yescan-skill#-文件扫描增强): document-scan enhancement across 13 modes — handwriting OCR, exam-paper enhance, image HD enhance, certificate/receipt enhance, handwriting removal, watermark removal, shadow removal, screen-pattern removal, background-color removal, crop & rectify, sketch drawing, line-art extraction, general document scan
+- [yescan-transoffice-universal](https://github.com/yescan-ai/yescan-skill#-图片转-office): image-to-Office conversion in 3 formats — image-to-excel (.xlsx), image-to-word (.docx), image-to-pdf (.pdf)
+
+## Quick Start
+
+```bash
+# Install all three skills via OpenClaw CLI
+openclaw skill install yescan-ocr-universal
+openclaw skill install yescan-scan-universal
+openclaw skill install yescan-transoffice-universal
+
+# Configure a single API key for all skills
+openclaw config set skills.entries.yescan-ocr-universal.env.SCAN_WEBSERVICE_KEY "<your_key>"
+openclaw config set skills.entries.yescan-scan-universal.env.SCAN_WEBSERVICE_KEY "<your_key>"
+openclaw config set skills.entries.yescan-transoffice-universal.env.SCAN_WEBSERVICE_KEY "<your_key>"
+```
+
+## Docs
+
+- [README (English)](https://github.com/yescan-ai/yescan-skill/blob/main/README.md): full installation, configuration, usage examples, architecture, API reference, error codes
+- [README (Chinese)](https://github.com/yescan-ai/yescan-skill/blob/main/README_cn.md): 完整中文文档
+- [Yescan Open Platform](https://scan.quark.cn/business): get the API key, view pricing, and read API documentation
+- [OpenClaw](https://github.com/anthropics/openclaw): the Agent runtime that executes these skills
+
+## Optional
+
+- [yescan-ai/yescan](https://github.com/yescan-ai/yescan): parent platform repo — 36 capabilities across API / MCP / OpenClaw / CLI / Hermes Agent
+- [yescan-ocr-qoder](https://github.com/yescan-ai/yescan-ocr-qoder): QoderWork-native variant of the OCR skill (17 scenes)
+- [yescan-office-qoder](https://github.com/yescan-ai/yescan-office-qoder): QoderWork-native variant of the image-to-Office skill (3 scenes)
+- [ClawHub: yescan-ocr-universal](https://clawhub.ai/mozhihuidage/yescan-ocr-universal): install the OCR skill directly from ClawHub
+- [ClawHub: yescan-transoffice-universal](https://clawhub.ai/mozhihuidage/yescan-transoffice-universal): install the Office-conversion skill directly from ClawHub
+
+## Requirements
+
+- Python 3.9+
+- OpenClaw installed and configured
+- One API key from [scan.quark.cn/business](https://scan.quark.cn/business) (shared across all three skills)
