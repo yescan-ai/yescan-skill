@@ -156,9 +156,9 @@ OCR 技能覆盖 17 个专业识别场景，从手写字迹到发票到医疗报
 
 ```bash
 # 一键安装全部三个技能
-openclaw skill install yescan-ocr-universal
-openclaw skill install yescan-scan-universal
-openclaw skill install yescan-transoffice-universal
+openclaw skills install yescan-ocr-universal
+openclaw skills install yescan-scan-universal
+openclaw skills install yescan-transoffice-universal
 ```
 
 **方式二：手动安装**
