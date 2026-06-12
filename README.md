@@ -19,7 +19,7 @@
 
 ---
 
-Yescan OpenClaw Skills 将 [夸克扫描王 (YesCan)](https://scan.quark.cn/business) 的文档 AI 能力封装为三个 [OpenClaw](https://github.com/anthropics/openclaw) Agent 技能。
+Yescan OpenClaw Skills 将 [夸克扫描王 (Yescan)](https://scan.quark.cn/business) 的文档 AI 能力封装为三个 [OpenClaw](https://github.com/anthropics/openclaw) Agent 技能。
 
 只需一个 `pip install` 和一个 API Key，你的 OpenClaw Agent 即可获得 **30+ 文档处理场景**的能力——包括手写识别、表格 OCR、证件扫描、图像增强、去水印以及图片转 Word/Excel/PDF。
 
@@ -68,7 +68,7 @@ Yescan OpenClaw Skills 将 [夸克扫描王 (YesCan)](https://scan.quark.cn/busi
 
 </div>
 
-**为什么选择 YesCan OpenClaw Skills？**
+**为什么选择 Yescan OpenClaw Skills？**
 
 - **Agent 原生**：从底层为 OpenClaw 的技能执行模型设计——意图匹配、场景路由、结构化 JSON 输出，开箱即用。
 - **30+ 专业场景**：每个场景使用针对特定文档类型微调的模型，精度远超通用 OCR 方案。
@@ -335,7 +335,7 @@ Agent 选择 `image-to-word`，生成保留排版的 `.docx` 文件。
 └─────────────────────────────────────────┼───────────┘
                                           │
                     ┌─────────────────────┼──────────────┐
-                    │       YesCan Skills 能力层            │
+                    │       Yescan Skills 能力层            │
                     │                                      │
                     │  ┌─────────┐  ┌────────┐  ┌──────┐ │
                     │  │  OCR    │  │  Scan  │  │Trans │ │
@@ -529,7 +529,7 @@ A: 不可以，出于安全考虑仅支持 HTTPS 链接。请使用 HTTPS 端点
 
 <div align="center">
 
-<p>由 YesCan 团队用心打造</p>
+<p>由 Yescan 团队用心打造</p>
 
 <p><a href="https://scan.quark.cn/business">获取 API Key</a> · <a href="https://github.com/YOUR_ORG/openclaw-yescan-skills/issues">反馈问题</a> · <a href="https://github.com/YOUR_ORG/openclaw-yescan-skills/discussions">社区讨论</a></p>
 
