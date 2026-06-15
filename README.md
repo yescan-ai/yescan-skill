@@ -523,7 +523,6 @@ A: 不可以，出于安全考虑仅支持 HTTPS 链接。请使用 HTTPS 端点
 
 - [OpenClaw](https://github.com/anthropics/openclaw) — 驱动这些技能的 Agent 框架。
 - [夸克扫描王](https://scan.quark.cn/business) — 文档 AI 引擎与云基础设施。
-- [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) — 项目结构和文档风格的灵感来源。
 
 ---
 
