@@ -12,7 +12,7 @@ Agent
          ├─ 1) common/validators.py        校验入参
          ├─ 2) common/ocr_client.py        请求 scan-business.quark.cn
          ├─ 3) common/result_handlers.py   解析 API 响应
-         ├─ 4) common/file_saver.py        若含 FileBase64 → 解码落盘
+         ├─ 4) common/file_saver.py        若含 ImageBase64 → 解码落盘
          └─ 5) 标准输出返回 JSON
 ```
 
@@ -25,7 +25,7 @@ Agent
   "code": "00000",
   "message": "success",
   "data": {
-    "path": "/tmp/1728912345_a1b2c3.docx"
+    "path": "/tmp/imgs/1728912345_a1b2c3.png"
   }
 }
 ```
@@ -34,21 +34,21 @@ Agent
 |---|---|---|
 | `code` | API | `"00000"` 表示成功，其他为错误码（见 troubleshooting.md） |
 | `message` | API | 文本描述 |
-| `data.path` | **客户端脚本追加** | `file_saver.py` 解码 `FileBase64` 后的本地文件绝对路径 |
+| `data.path` | **客户端脚本追加** | `file_saver.py` 解码 `ImageBase64` 后的本地文件绝对路径 |
 
-> **关键约定**：API 原始响应含 `data.TypesetInfo[0].FileBase64` 字段，`save_document_from_result` 处理后会将其解码落盘并替换为 `data.path`，最终输出不含 FileBase64。Agent 只需直接展示 `path`，无需自行解码 BASE64。
+> **关键约定**：API 原始响应含 `data.ImageBase64` 字段，`save_image_from_result` 处理后会将其解码落盘并替换为 `data.path`，最终输出不含 ImageBase64。Agent 只需直接展示 `path`，无需自行解码 BASE64。
 
 ## 3. `file_saver.py` 的行为约束
 
-- 仅当 `code == "00000"` 且 `data.FileBase64` 非空时触发保存
-- 输出目录：系统临时目录（`tempfile.gettempdir()`，macOS/Linux 为 `/tmp`，Windows 为 `%TEMP%`）
-- 文件名：`<unix_timestamp>_<16位随机十六进制串>.<ext>`，扩展名根据 scene 推断（`image-to-excel` → `.xlsx`，依此类推）
-- 通过文件扩展名与 scene 匹配来确认保存格式（`image-to-word` → `.docx`，`image-to-excel` → `.xlsx`，`image-to-pdf` → `.pdf`），不做 magic byte 校验
+- 仅当 `code == "00000"` 且 `data.ImageBase64` 非空时触发保存
+- 输出目录：系统临时目录下的 `imgs` 子目录（`os.path.join(tempfile.gettempdir(), "imgs")`，macOS/Linux 为 `/tmp/imgs`，Windows 为 `%TEMP%\imgs`）
+- 文件名：`<unix_timestamp>_<16位随机十六进制串>.<ext>`，扩展名根据 magic byte 检测（PNG `\x89PNG` → `.png`，JPEG `\xFF\xD8\xFF` → `.jpg`，WebP `RIFF...WEBP` → `.webp`，其他降级为 `.png`）
+- 通过 magic byte 校验解码后的内容确为图片格式（防止中间错位）
 - 写入失败会在响应中以 `code != "00000"` 形式返回，不会抛出未处理异常
 
 ## 4. `--platform` 字段的用途
 
-`--platform <AGENT_NAME>` 仅用于在请求头中标识来源 Agent（如 `claudecode`、`qoderWork`、`coze`、`community` 等），便于服务端做调用统计与限流策略。**不影响识别效果，也不会作为业务参数透传给模型**。
+`--platform <AGENT_NAME>` 仅用于在请求头中标识来源 Agent（如 `claudecode`、`qoderWork`、`coze`、`community` 等），便于服务端做调用统计与限流策略。**不影响处理效果，也不会作为业务参数透传给模型**。
 
 ## 5. 错误处理原则
 
