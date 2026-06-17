@@ -8,20 +8,36 @@ Enhance, denoise, and optimize images — remove handwriting, watermarks, shadow
 
 Send a single image (URL / local path / base64) to the Quark Scan King API and receive an enhanced image saved to the system temp directory. Designed for AI agents (Claude / Codex / Claude Code / Coze / etc.) to invoke as a skill.
 
-| Category | Scenes |
+| Scene | Description |
 |---|---|
-| Enhancement | `exam-enhance`, `image-hd-enhance`, `certificate-enhance`, `scan-contract`, `scan-document` |
-| Removal | `remove-handwriting`, `remove-watermark`, `remove-shadow`, `remove-screen-pattern`, `remove-background-color` |
-| Transform | `image-crop-rectify`, `sketch-drawing`, `extract-lineart` |
+| `exam-enhance` | Exam papers / handwritten notes → HD scanned doc, denoised & clean background |
+| `image-hd-enhance` | One-click quality boost for blurry, dark, or aged photos |
+| `certificate-enhance` | Smart clarity for ID cards & receipts, key info clearly readable |
+| `remove-handwriting` | Precisely remove handwriting, fully restore printed original |
+| `remove-watermark` | Remove text/logo/stamp watermarks without damaging background |
+| `remove-shadow` | Eliminate shooting shadows, restore uniform brightness |
+| `remove-screen-pattern` | Remove moire patterns & glare from screen captures |
+| `remove-background-color` | Strip background color, convert to clean white-bg black-text |
+| `image-crop-rectify` | Auto-crop + perspective correction, skewed → straight |
+| `sketch-drawing` | Convert photos to sketch / pencil-drawing style |
+| `extract-lineart` | Extract clean line art for creative or design use |
+| `scan-contract` | Optimize contract/agreement image quality for archiving |
+| `scan-document` | General document scan enhancement (fallback scene) |
 
 ## Quick start
 
 1. Get an API key from `https://scan.quark.cn/business` (Developer Console → API Key)
-2. Save it locally:
-   ```bash
-   echo 'SCAN_WEBSERVICE_KEY=<your_api_key>' > ~/.yescan_env
-   chmod 600 ~/.yescan_env
-   ```
+2. Configure your API key (choose one):
+   - **Option A: Environment variable** (recommended)
+     ```bash
+     export SCAN_WEBSERVICE_KEY=<your_api_key>
+     ```
+   - **Option B: Config file**
+     ```bash
+     echo 'SCAN_WEBSERVICE_KEY=<your_api_key>' > ~/.yescan_env
+     chmod 600 ~/.yescan_env
+     ```
+   > The environment variable takes priority; if not set, the key is loaded from `~/.yescan_env`.
 3. Install the skill into your agent runtime (see your agent's skill installation docs)
 4. Ask the agent: *"Enhance this blurry document photo: /path/to/image.png"*
 

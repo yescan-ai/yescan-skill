@@ -8,20 +8,36 @@
 
 向夸克扫描王服务 API 发送单张图片（URL / 本地路径 / BASE64），返回增强后的图片并保存到系统临时目录。面向 AI Agent（Claude / Codex / Claude Code / Coze 等）作为技能调用。
 
-| 分类 | 场景 scene |
+| 场景 scene | 能力说明 |
 |---|---|
-| 画质增强 | `exam-enhance`、`image-hd-enhance`、`certificate-enhance`、`scan-contract`、`scan-document` |
-| 去瑕疵 | `remove-handwriting`、`remove-watermark`、`remove-shadow`、`remove-screen-pattern`、`remove-background-color` |
-| 变换 | `image-crop-rectify`、`sketch-drawing`、`extract-lineart` |
+| `exam-enhance` | 试卷/手写笔记转高清电子文档，去噪、背景纯净化 |
+| `image-hd-enhance` | 模糊、昏暗、老旧照片一键画质增强 |
+| `certificate-enhance` | 证件票据智能清晰化，关键信息清晰可辨 |
+| `remove-handwriting` | 精准去除手写笔迹，完整还原印刷原件 |
+| `remove-watermark` | 去除文字/Logo/标记水印，不损伤背景 |
+| `remove-shadow` | 去除拍摄阴影，还原均匀亮度 |
+| `remove-screen-pattern` | 去除屏幕摩尔纹与反光，文字清晰可读 |
+| `remove-background-color` | 去底色，彩色文档转纯白背景黑字 |
+| `image-crop-rectify` | 自动裁边 + 透视矫正，歪斜照片秒变规整 |
+| `sketch-drawing` | 照片转素描/速写艺术风格 |
+| `extract-lineart` | 提取纯净线稿，用于创作或设计 |
+| `scan-contract` | 合同/协议画质优化，清晰归档 |
+| `scan-document` | 通用文档扫描增强（兜底场景） |
 
 ## 快速开始
 
 1. 在 `https://scan.quark.cn/business` 开发者后台创建应用、获取 API Key
-2. 将密钥写入 `~/.yescan_env`：
-   ```bash
-   echo 'SCAN_WEBSERVICE_KEY=<你的密钥>' > ~/.yescan_env
-   chmod 600 ~/.yescan_env
-   ```
+2. 配置 API 密钥（任选其一）：
+   - **方式一：环境变量**（推荐）
+     ```bash
+     export SCAN_WEBSERVICE_KEY=<你的密钥>
+     ```
+   - **方式二：配置文件**
+     ```bash
+     echo 'SCAN_WEBSERVICE_KEY=<你的密钥>' > ~/.yescan_env
+     chmod 600 ~/.yescan_env
+     ```
+   > 优先读取环境变量，未设置时自动从 `~/.yescan_env` 文件加载。
 3. 将本技能安装到你的 Agent 运行时（参考各平台的技能安装文档）
 4. 对 Agent 说：*「帮我增强这张模糊的文档照片：/path/to/image.png」*
 
@@ -71,7 +87,7 @@ yescan-scan-universal/
 - [SECURITY.md](SECURITY.md) / [references/privacy.md](references/privacy.md) — 数据流向与密钥管理
 - [references/implementation.md](references/implementation.md) — 客户端脚本行为与响应字段
 - [references/troubleshooting.md](references/troubleshooting.md) — 错误码与排错
-- [examples/](examples/) — 增强 / 去瑕疵 / 艺术效果三类典型用例
+- [examples/](examples/) — 13 个场景的典型输入/预期输出示例
 
 ## 安全
 
