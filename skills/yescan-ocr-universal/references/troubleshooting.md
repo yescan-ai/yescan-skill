@@ -9,7 +9,6 @@
 | 错误码 | 含义 | 排查步骤 |
 |---|---|---|
 | A0100 | 凭证无效 | 1. 确认 `~/.yescan_env` 存在且包含 `SCAN_WEBSERVICE_KEY=<key>`<br>2. 确认 key 无前后空格或引号问题<br>3. 访问 scan.quark.cn/business 确认 key 未过期 |
-| A0201 | 缺少图片输入 | 确认调用时提供了 `--url`、`--path` 或 `--base64` 之一 |
 | A0211 | 配额不足 | 访问 scan.quark.cn/business 开发者后台充值（注意购买 Skill 专用套餐） |
 | INVALID_SCENE | 场景名无效 | 检查 `--scene` 值是否在 SKILL.md 场景列表中 |
 | INVALID_INPUT | 输入参数冲突 | 三种输入方式（url/path/base64）只能提供一种 |
