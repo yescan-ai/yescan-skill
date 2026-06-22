@@ -26,7 +26,7 @@ def run_ocr(result_handler: Optional[ResultHandler] = None,
         result_handler_with_config: 需要配置的结果处理函数，签名为 (OCRResult, config) -> OCRResult
     
     使用示例:
-        # OCR类（不保存文件）
+        # 仅调用（不保存文件）
         run_ocr()
         
         # 图片增强类（保存图片）
