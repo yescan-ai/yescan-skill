@@ -130,7 +130,7 @@ OCR 技能覆盖 17 个专业识别场景，从手写字迹到发票到医疗报
 | 13 | 扫描文件 | `scan-document` | 通用文档优化 |
 
 ##### 文件扫描增强效果展示
-![Uploading preview4.gif…]()
+<img width="1930" height="1100" alt="preview4" src="https://github.com/user-attachments/assets/77f2de88-9679-4132-877b-43925f493785" />
 
 ### 📄 图片转 Office
 
