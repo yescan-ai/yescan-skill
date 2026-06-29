@@ -107,8 +107,7 @@ OCR 技能覆盖 17 个专业识别场景，从手写字迹到发票到医疗报
 > **注意：** `handwritten-ocr` 标识同时出现在 OCR 和扫描技能中。OCR 技能返回结构化文本（JSON），扫描技能返回增强后的图片。Agent 会根据用户意图（提取文字 vs 增强图片）自动选择正确的技能。
 
 #### OCR效果展示
-<img width="1807" height="1047" alt="image" src="https://github.com/user-attachments/assets/1720e866-0a54-4fd4-9498-ccb0234fed20" />
-
+<img width="1920" height="1088" alt="preview3" src="https://github.com/user-attachments/assets/49d83000-a351-4725-9ace-c14eeb9898dc" />
 
 ### 📷 文件扫描增强
 
