@@ -106,7 +106,7 @@ OCR 技能覆盖 17 个专业识别场景，从手写字迹到发票到医疗报
 >
 > **注意：** `handwritten-ocr` 标识同时出现在 OCR 和扫描技能中。OCR 技能返回结构化文本（JSON），扫描技能返回增强后的图片。Agent 会根据用户意图（提取文字 vs 增强图片）自动选择正确的技能。
 
-#### OCR效果展示
+##### OCR效果展示
 <img width="1920" height="1088" alt="preview3" src="https://github.com/user-attachments/assets/49d83000-a351-4725-9ace-c14eeb9898dc" />
 
 ### 📷 文件扫描增强
@@ -128,6 +128,9 @@ OCR 技能覆盖 17 个专业识别场景，从手写字迹到发票到医疗报
 | 11 | 素描速写 | `sketch-drawing` | 照片转铅笔素描风格 |
 | 12 | 提取线稿 | `extract-lineart` | 提取干净的线条图 |
 | 13 | 扫描文件 | `scan-document` | 通用文档优化 |
+
+##### 文件扫描增强效果展示
+![Uploading preview4.gif…]()
 
 ### 📄 图片转 Office
 
