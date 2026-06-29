@@ -144,6 +144,9 @@ OCR 技能覆盖 17 个专业识别场景，从手写字迹到发票到医疗报
 
 > 当目标格式不明确时，Agent 会主动询问用户选择 Word、Excel 还是 PDF。
 
+##### 图片转 Office 效果展示
+<img width="1928" height="1098" alt="preview5" src="https://github.com/user-attachments/assets/0f6a6d6e-74bb-46ea-92bf-ab5681163f7b" />
+
 ---
 
 ## 快速开始
