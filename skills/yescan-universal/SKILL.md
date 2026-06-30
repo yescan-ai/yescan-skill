@@ -19,11 +19,11 @@ metadata:
 
 ### Plan — 理解意图，发现能力
 
-1. 确认环境就绪：`pip3 index versions yescan`，检查安装状态与版本
+1. 确认环境就绪：`yescan --version`，检查是否安装
    - 未安装 → `pip3 install yescan`
-   - 已安装但 INSTALLED < LATEST → 告知用户有新版本可用，引导执行 `pip3 install yescan --upgrade`
-   - 已是最新 → 继续
+   - 已安装 → `pip3 index versions yescan` 检查版本，INSTALLED < LATEST 时引导执行 `pip3 install yescan --upgrade`
    - `yescan config get SCAN_WEBSERVICE_KEY`，未配置则引导用户配置
+     - 设置命令：`yescan config set SCAN_WEBSERVICE_KEY <your_api_key>`
      > Key 获取方式：https://scan.quark.cn/business → 开发者后台 → API Key
 2. 发现能力：
    ```bash
