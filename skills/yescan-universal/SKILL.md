@@ -9,10 +9,6 @@ metadata:
   homepage: https://scan.quark.cn/business
 ---
 
-> **隐私提示**：本技能会将图片发送至 `scan-business.quark.cn` 进行处理。详见 [references/privacy.md](./references/privacy.md)。
-
----
-
 ## 执行流程
 
 每次执行严格按 **Plan → Execute → Verify** 顺序进行，不得跳过或乱序。
