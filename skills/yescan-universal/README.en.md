@@ -25,7 +25,7 @@ pip3 install yescan
 yescan config set SCAN_WEBSERVICE_KEY <your_api_key>
 ```
 
-> Get your API Key: https://scan.quark.cn/business → Developer Console
+> Apply for an API Key at the [Quark Scan Developer Console](https://scan.quark.cn/business).
 
 ### 3. Usage
 
