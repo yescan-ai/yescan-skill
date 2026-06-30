@@ -20,7 +20,9 @@ yescan CLI 输出 JSON 响应，以下是常见错误码及对应排查步骤。
 
 ### Q: yescan 命令不存在
 
-确认已安装：`pip3 install yescan`，安装后执行 `yescan --version` 验证。
+1. 确认已安装：`pip3 install yescan --upgrade`
+2. 若已安装仍找不到，说明 pip3 scripts 目录不在 PATH 中，执行 `python3 -m site --user-base` 查看安装路径，将其下的 `bin/`（macOS/Linux）或 `Scripts/`（Windows）加入 PATH
+3. 验证：`yescan --version`
 
 ### Q: 提示凭证无效
 
