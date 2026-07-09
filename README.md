@@ -1,6 +1,6 @@
 <div align="center">
 
-# Yescan Skills
+# Alibaba Quark Scanking Skills
 
 <h3>强大的文档 AI 能力，为 OpenClaw Agent 而生</h3>
 
