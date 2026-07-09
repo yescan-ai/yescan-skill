@@ -4,7 +4,7 @@ description: 夸克扫描王一站式图片/文档处理中心。当用户需要
 license: MIT
 compatibility: Requires pip3 install yescan and SCAN_WEBSERVICE_KEY configuration. Performs network calls to scan-business.quark.cn.
 metadata:
-  author: yescan-ai
+  author: alibaba-quark-scanking
   version: "1.0.5"
   homepage: https://scan.quark.cn/business
 ---

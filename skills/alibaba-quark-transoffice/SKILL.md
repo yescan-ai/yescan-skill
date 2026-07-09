@@ -4,7 +4,7 @@ description: 由夸克扫描王提供的文件格式转换工具。当用户需�
 license: MIT
 compatibility: Requires python3 and the SCAN_WEBSERVICE_KEY environment variable. Performs network calls to scan-business.quark.cn and writes output files to the system temp directory.
 metadata:
-  author: yescan-ai
+  author: alibaba-quark-scanking
   version: "1.1.4"
   homepage: https://scan.quark.cn/business
   primary-env: SCAN_WEBSERVICE_KEY
