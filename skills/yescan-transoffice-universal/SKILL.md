@@ -4,7 +4,7 @@ description: 当用户需要将图片、截图或扫描件转换为 Office 文�
 license: MIT
 compatibility: Requires python3 and the SCAN_WEBSERVICE_KEY environment variable. Performs network calls to scan-business.quark.cn and writes output files to the system temp directory.
 metadata:
-  author: yescan-ai
+  author: alibaba-quark-scanking
   version: "1.1.4"
   homepage: https://scan.quark.cn/business
   primary-env: SCAN_WEBSERVICE_KEY

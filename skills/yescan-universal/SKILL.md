@@ -4,7 +4,7 @@ description: 当用户需要对图片进行文字识别（OCR）、图片翻译�
 license: MIT
 compatibility: Requires pip3 install yescan and SCAN_WEBSERVICE_KEY configuration. Performs network calls to scan-business.quark.cn.
 metadata:
-  author: yescan-ai
+  author: alibaba-quark-scanking
   version: "1.0.5"
   homepage: https://scan.quark.cn/business
 ---

@@ -4,7 +4,7 @@ description: 当用户需要对图片、截图进行画质优化、瑕疵去除�
 license: MIT
 compatibility: Requires python3 and the SCAN_WEBSERVICE_KEY environment variable. Performs network calls to scan-business.quark.cn and writes output images to the system temp directory.
 metadata:
-  author: yescan-ai
+  author: alibaba-quark-scanking
   version: "1.1.4"
   homepage: https://scan.quark.cn/business
   primary-env: SCAN_WEBSERVICE_KEY

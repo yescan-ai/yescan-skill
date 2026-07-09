@@ -111,4 +111,4 @@ yescan-ocr-universal/
 
 ## 作者
 
-[yescan-ai](https://github.com/yescan-ai)
+[alibaba-quark-scanking](https://github.com/alibaba-quark-scanking)

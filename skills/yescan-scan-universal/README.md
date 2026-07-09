@@ -90,4 +90,4 @@ This skill sends user-provided images to a third-party API. Read [SECURITY.md](S
 
 ## Author
 
-[yescan-ai](https://github.com/yescan-ai)
+[alibaba-quark-scanking](https://github.com/alibaba-quark-scanking)
