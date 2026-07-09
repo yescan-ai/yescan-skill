@@ -1,4 +1,4 @@
-# yescan-scan-universal
+# alibaba-quark-scan
 
 [English](README.md) | **简体中文**
 
@@ -44,7 +44,7 @@
 ## 目录结构
 
 ```
-yescan-scan-universal/
+alibaba-quark-scan/
 ├── SKILL.md                 # 面向 Agent 的技能定义（意图分发）
 ├── README.md                # 英文说明
 ├── README.zh-CN.md          # 中文说明

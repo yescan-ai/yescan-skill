@@ -1,4 +1,4 @@
-# yescan-scan-universal
+# alibaba-quark-scan
 
 **English** | [简体中文](README.zh-CN.md)
 
@@ -44,7 +44,7 @@ Send a single image (URL / local path / base64) to the Quark Scan King API and r
 ## Repository layout
 
 ```
-yescan-scan-universal/
+alibaba-quark-scan/
 ├── SKILL.md                 # Agent-facing skill definition (intent dispatcher)
 ├── README.md                # English documentation
 ├── README.zh-CN.md          # 中文说明

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Deployment settings for the yescan-scan-universal skill.
+Deployment settings for the alibaba-quark-scan skill.
 
 Security audit notes
 --------------------
@@ -18,4 +18,4 @@ Security audit notes
 API_URL = "https://scan-business.quark.cn/vision"
 PLATFORM = "community"
 VERSION = "1.1.4"
-SKILL_NAME = "yescan-scan-universal"
+SKILL_NAME = "alibaba-quark-scan"
